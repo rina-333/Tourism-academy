@@ -28,6 +28,7 @@ _Response(200)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -56,9 +57,10 @@ _Request Body_
 ```
 {
   "title": "<title of news to get insert into>"
-  "description": "<description to get insert into>"
-  "category": "<category to get insert into>"
-  "date": "<date to get insert into>"
+  "image_url": "<image url of news to get insert into>"
+  "description": "<description of news to get insert into>"
+  "category": "<category of news to get insert into>"
+  "date": "<date of news to get insert into>"
 }
 ```
 
@@ -67,6 +69,7 @@ _Response(201)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -95,7 +98,7 @@ _Request Header_
 _Request Body_
 ```
 {
-  "category": "<category to get insert into>"
+  "category": "<category of news to get insert into>"
 }
 ```
 
@@ -104,6 +107,7 @@ _Response(200)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -133,9 +137,10 @@ _Request Body_
 ```
 {
   "title": "<title of news to get insert into>"
-  "description": "<description to get insert into>"
-  "category": "<category to get insert into>"
-  "date": "<date to get insert into>"
+  "image_url": "<image url of news to get insert into>"
+  "description": "<description of news to get insert into>"
+  "category": "<category of news to get insert into>"
+  "date": "<date of news to get insert into>"
 }
 ```
 
@@ -144,6 +149,7 @@ _Response(200)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -212,6 +218,7 @@ _Response(200)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -240,9 +247,10 @@ _Request Body_
 ```
 {
   "title": "<title of events to get insert into>"
-  "description": "<description to get insert into>"
-  "category": "<category to get insert into>"
-  "date": "<date to get insert into>"
+  "image_url": "<image url of events to get insert into>"
+  "description": "<description of events to get insert into>"
+  "category": "<category of events to get insert into>"
+  "date": "<date of events to get insert into>"
 }
 ```
 
@@ -251,6 +259,7 @@ _Response(201)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -288,6 +297,7 @@ _Response(200)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
@@ -317,9 +327,10 @@ _Request Body_
 ```
 {
   "title": "<title of events to get insert into>"
-  "description": "<description to get insert into>"
-  "category": "<category to get insert into>"
-  "date": "<date to get insert into>"
+  "image_url": "<image url of events to get insert into>"
+  "description": "<description of events to get insert into>"
+  "category": "<category of events to get insert into>"
+  "date": "<date of events to get insert into>"
 }
 ```
 
@@ -328,6 +339,7 @@ _Response(200)_
 {
   "id": <given by system>
   "title": "<posted title>"
+  "image_url": "<posted image_url>"
   "description": "<posted description>"
   "category": "<posted category>"
   "date": "<posted date>"
