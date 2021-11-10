@@ -28,7 +28,6 @@ _Response(200)_
   "title": "<posted title>"
   "image_url": "<posted image url>"
   "description": "<posted description>"
-  "category": "<posted category>"
   "date": "<posted date>"
 }
 ```
@@ -57,7 +56,6 @@ _Request Body_
   "title": "<title of news to get insert into>"
   "image_url": "<image url of news to get insert into>"
   "description": "<description of news to get insert into>"
-  "category": "<category of news to get insert into>"
   "date": "<date of news to get insert into>"
 }
 ```
@@ -69,45 +67,6 @@ _Response(201)_
   "title": "<posted title>"
   "image_url": "<posted image url>"
   "description": "<posted description>"
-  "category": "<posted category>"
-  "date": "<posted date>"
-}
-```
-
-_Response (400 - Bad Request)_
-```
-{
-  "message": "Invalid request"
-}
-```
----
-
-### PATCH /news/:id
-
-> Update/modify news
-
-_Request Header_
-```
-{
-  "access_token": "<your access token>"
-}
-```
-
-_Request Body_
-```
-{
-  "category": "<category of news to get insert into>"
-}
-```
-
-_Response(200)_
-```
-{
-  "id": <given by system>
-  "title": "<posted title>"
-  "image_url": "<posted image url>"
-  "description": "<posted description>"
-  "category": "<posted category>"
   "date": "<posted date>"
 }
 ```
@@ -137,7 +96,6 @@ _Request Body_
   "title": "<title of news to get insert into>"
   "image_url": "<image url of news to get insert into>"
   "description": "<description of news to get insert into>"
-  "category": "<category of news to get insert into>"
   "date": "<date of news to get insert into>"
 }
 ```
@@ -149,7 +107,6 @@ _Response(200)_
   "title": "<posted title>"
   "image_url": "<posted image url>"
   "description": "<posted description>"
-  "category": "<posted category>"
   "date": "<posted date>"
 }
 ```
@@ -216,7 +173,6 @@ _Response(200)_
   "title": "<posted title>"
   "image_url": "<posted image url>"
   "description": "<posted description>"
-  "category": "<posted category>"
   "date": "<posted date>"
 }
 ```
@@ -245,7 +201,6 @@ _Request Body_
   "title": "<title of events to get insert into>"
   "image_url": "<image url of events to get insert into>"
   "description": "<description of events to get insert into>"
-  "category": "<category of events to get insert into>"
   "date": "<date of events to get insert into>"
 }
 ```
@@ -257,45 +212,6 @@ _Response(201)_
   "title": "<posted title>"
   "image_url": "<posted image url>"
   "description": "<posted description>"
-  "category": "<posted category>"
-  "date": "<posted date>"
-}
-```
-
-_Response (400 - Bad Request)_
-```
-{
-  "message": "Invalid request"
-}
-```
----
-
-### PATCH /events/:id
-
-> Update/modify events
-
-_Request Header_
-```
-{
-  "access_token": "<your access token>"
-}
-```
-
-_Request Body_
-```
-{
-  "category": "<category to get insert into>"
-}
-```
-
-_Response(200)_
-```
-{
-  "id": <given by system>
-  "title": "<posted title>"
-  "image_url": "<posted image url>"
-  "description": "<posted description>"
-  "category": "<posted category>"
   "date": "<posted date>"
 }
 ```
@@ -325,7 +241,6 @@ _Request Body_
   "title": "<title of events to get insert into>"
   "image_url": "<image url of events to get insert into>"
   "description": "<description of events to get insert into>"
-  "category": "<category of events to get insert into>"
   "date": "<date of events to get insert into>"
 }
 ```
@@ -337,7 +252,6 @@ _Response(200)_
   "title": "<posted title>"
   "image_url": "<posted image_url>"
   "description": "<posted description>"
-  "category": "<posted category>"
   "date": "<posted date>"
 }
 ```
