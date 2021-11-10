@@ -13,9 +13,7 @@ This was presenting to academy for keep update news and event. Also to brand imp
 
 _Request Header_
 ```
-{
-  "access_token": "<your access token>"
-}
+not needed
 ```
 
 _Request Body_
@@ -203,9 +201,7 @@ _Response (405 - Bad Request)_
 
 _Request Header_
 ```
-{
-  "access_token": "<your access token>"
-}
+not needed
 ```
 
 _Request Body_
@@ -380,6 +376,78 @@ _Response(200)_
 ```
 
 _Response (405 - Bad Request)_
+```
+{
+  "message": "Invalid request"
+}
+```
+---
+
+### GET /suggest
+
+> Get all suggest
+
+_Request Header_
+```
+{
+  "access_token": "<your access token>"
+}
+```
+
+_Request Body_
+```
+not needed
+```
+
+_Response(200)_
+```
+{
+  "id": <given by system>
+  "name_suggest": "<posted title>"
+  "suggest": "<posted suggest>"
+  "email_suggest": "<posted email>"
+  "date_suggest": "<posted date>"
+}
+```
+
+_Response (400 - Bad Request)_
+```
+{
+  "message": "Invalid request"
+}
+```
+---
+
+### POST /suggest/:id
+> Post create suggest
+
+_Request Header_
+```
+no need
+```
+
+_Request Body_
+```
+{
+  "name_suggest": "<name of suggests to get insert into>"
+  "suggest": "<suggests to get insert into>"
+  "email_suggest": "<email of suggests to get insert into>"
+  "date_suggest": "<date of sugests to get insert into>"
+}
+```
+
+_Response(201)_
+```
+{
+  "id": <given by system>
+  "name_suggest": "<posted name>"
+  "suggest": "<posted suggest>"
+  "email_suggest": "<posted email>"
+  "date_suggest": "<posted date>"
+}
+```
+
+_Response (400 - Bad Request)_
 ```
 {
   "message": "Invalid request"
