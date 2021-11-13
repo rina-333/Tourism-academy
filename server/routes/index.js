@@ -6,7 +6,7 @@ const authentication = require ( '../middlewares/authentication' )
 
 router.get ( '/register', userController.register )
 router.post ( '/login', userController.login )
-// router.get ( '/news', newsController.getAll )
+router.get ( '/news', newsController.read )
 // router.get ( '/events', eventController.getAll )
 // router.get ( '/news/:id', newsController.findOne )
 // router.get ( '/events/:id', eventsController.findOne )
