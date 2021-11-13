@@ -13,10 +13,15 @@ module.exports = {
     */
     await queryInterface.bulkInsert('Users', [{
       username: 'adminAPB@',
-      password: 'apb2021r',
+      password: '$2a$08$.X/BEcw7NW9JLbC8F6Uaa.VhelkidzF0rt191JBNcyg1GUrozu6W2',
       createdAt: new Date(),
       updatedAt: new Date()
-    }])
+    }],
+    {
+      validate: true, 
+      individualHooks: true,
+    }
+    )
   },
 
   down: async (queryInterface, Sequelize) => {
