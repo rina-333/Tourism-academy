@@ -29,6 +29,41 @@ class newsController {
         } )
       } )
   }
+
+  static findOne ( req, res, next ) {
+    News.findByPk ( +req.params.id )
+      .then ( ( foundNews ) => {
+        if ( foundNews ) {
+          res.status ( 200 ).json ( { news : foundNews } )
+        } else  {
+          throw { status: 404, message: "News not Found" }
+        }
+      } )
+      .catch ( ( err ) => {
+        next ( err )
+      } )
+  }
+
+  static update ( req, res, next ) {
+    const { title, description, date } = req.body
+    News.update ( {
+      title,
+      image_url: req.image_url,
+      description,
+      date
+    }, {
+      where: {
+        id: +req.params.id
+      },
+      returning: true 
+    } )
+      .then ( ( updatedNews ) => {
+        res.status ( 200 ).json ( { message: 'News has been updated', updatedNews } )
+      } )
+      .catch ( ( err ) => {
+        next ( err )
+      } )
+  }
 }
 
 module.exports = newsController
