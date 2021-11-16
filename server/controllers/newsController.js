@@ -64,6 +64,24 @@ class newsController {
         next ( err )
       } )
   }
+
+  static delete ( req, res, next ) {
+    News.destroy ( {
+    where: {
+      id: +req.params.id
+    }
+  } )
+    .then ( ( deletedNews ) => {
+      if ( deletedNews ) {
+        res.status ( 200 ).json ( { message: 'Selected News has been deleted' } )
+      } else {
+        throw { status: 400, message: 'Failed to delete selected News' }
+      }
+    } )
+    .catch ( ( err ) => {
+      next ( err )
+    } )
+  }
 }
 
 module.exports = newsController
