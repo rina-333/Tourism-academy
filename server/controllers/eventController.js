@@ -23,10 +23,7 @@ class eventController {
         res.status ( 201 ).json ( { message: 'Event created', event: createEvent } )
       } )
       .catch ( ( err ) => {
-        next ( {
-          status: 500,
-          msg: 'Internal Server Error'
-        } )
+        next ( err )
       } )
   }
 

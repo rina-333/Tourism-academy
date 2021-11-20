@@ -15,8 +15,25 @@ module.exports = (sequelize, DataTypes) => {
   };
   Suggest.init({
     name_suggest: DataTypes.STRING,
-    desc_suggest: DataTypes.TEXT,
-    email_suggest: DataTypes.STRING,
+    desc_suggest: {
+      type: DataTypes.TEXT,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: 'Describe Suggest Require'
+        }
+      }
+    },
+    email_suggest: {
+      type: DataTypes.STRING,
+      unique: true,
+      validate: {
+        isEmail: {
+          args: true,
+          msg: 'Invalid Email format'
+        }
+      }
+    },
     date_suggest: DataTypes.DATE
   }, {
     sequelize,

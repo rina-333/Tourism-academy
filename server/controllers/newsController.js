@@ -23,10 +23,7 @@ class newsController {
         res.status ( 201 ).json ( { message: 'News created', news: createNews } )
       } )
       .catch ( ( err ) => {
-        next ( {
-          status: 500,
-          msg: 'Internal Server Error'
-        } )
+        next ( err )
       } )
   }
 
