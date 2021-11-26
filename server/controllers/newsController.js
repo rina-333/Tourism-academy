@@ -62,6 +62,77 @@ class newsController {
       } )
   }
 
+  static modifyTitle ( req, res, next ) {
+    const { title } = req.body
+    News.update ( {
+      title
+    }, {
+      where: {
+        id: +req.params.id
+      },
+      returning: true
+    } )
+      .then ( ( modifiedTitleNews ) => {
+        res.status ( 200 ).json ( { message: `Title News has been modified`, news: modifiedTitleNews[1][0] } )
+      } )
+      .catch ( ( err ) => {
+        next ( err )
+      } )
+  }
+
+  static modifyImage ( req, res, next ) {
+    News.update ( {
+      image_url: req.image_url
+    }, {
+      where: {
+        id: +req.params.id
+      },
+      returning: true
+    } )
+      .then ( ( modifiedImageNews ) => {
+        res.status ( 200 ).json ( { message: `Image News has been modified`, news: modifiedImageNews[1][0] } )
+      } )
+      .catch ( ( err ) => {
+        next ( err )
+      } )
+  }
+
+  static modifyDescription ( req, res, next ) {
+    const { description } = req.body
+    News.update ( {
+      description
+    }, {
+      where: {
+        id: +req.params.id
+      },
+      returning: true
+    } )
+      .then ( ( modifiedDescNews ) => {
+        res.status ( 200 ).json ( { message: `Description News has been modified`, news: modifiedDescNews[1][0] } )
+      } )
+      .catch ( ( err ) => {
+        next ( err )
+      } )
+  }
+
+  static modifyDate ( req, res, next ) {
+    const { date } = req.body
+    News.update ( {
+      date
+    }, {
+      where: {
+        id: +req.params.id
+      },
+      returning: true
+    } )
+      .then ( ( modifiedDateNews ) => {
+        res.status ( 200 ).json ( { message: `Date News has been modified`, news: modifiedDateNews[1][0] } )
+      } )
+      .catch ( ( err ) => {
+        next ( err )
+      } )
+  }
+
   static delete ( req, res, next ) {
     News.destroy ( {
     where: {
