@@ -35,5 +35,6 @@ router.patch ( '/events/:id/editDescription', eventController.modifyDescription 
 router.patch ( '/events/:id/editDate', eventController.modifyDate )
 router.delete ( '/events/:id', eventController.delete )
 router.get ( '/suggest', suggestController.read )
+router.delete ( '/suggest/:id', suggestController.delete )
 
 module.exports = router

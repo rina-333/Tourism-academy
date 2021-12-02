@@ -27,6 +27,24 @@ class suggestController {
         next ( err )
       } )
   }
+
+  static delete ( req, res, next ) {
+    Suggest.destroy ( {
+    where: {
+      id: +req.params.id
+    }
+  } )
+    .then ( ( deletedSuggest ) => {
+      if ( deletedSuggest ) {
+        res.status ( 200 ).json ( { message: 'Selected Suggest has been deleted' } )
+      } else {
+        throw { status: 400, message: 'Failed to delete selected Suggest' }
+      }
+    } )
+    .catch ( ( err ) => {
+      next ( err )
+    } )
+  }
 }
 
 module.exports = suggestController
