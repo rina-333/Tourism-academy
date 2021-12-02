@@ -26,21 +26,14 @@ class userController {
     } )
     .then ( ( foundUser ) => {
       if ( foundUser ) {
-        // console.log (foundUser, 'foundusernya')
         const comparePassword = decode ( password, foundUser.password )
-        // console.log(password,'password')
-        // console.log(foundUser.password,'founduserpassword')
-        // console.log('masuk if awal')
         if ( comparePassword ) {
-          // console.log('masuk if compare')
           const access_token = sign ( {
             id: foundUser.id,
             username: foundUser.username
           } )
           res.status ( 200 ).json ( { id: foundUser.id, username: foundUser.username, access_token } )
         } else {
-          // console.log('masuk else')
-          // console.log (foundUser)
           throw { status: 400, message: 'Wrong Password' }
         }
       }
@@ -49,9 +42,6 @@ class userController {
       next ( err )
     } )
   }
-
-  
-
 }
 
 module.exports = userController

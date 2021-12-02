@@ -10,8 +10,6 @@ const eventController = require ( '../controllers/eventController' )
 const suggestController = require ( '../controllers/suggestController' )
 const authentication = require ( '../middlewares/authentication' )
 
-
-// router.get ( '/register', userController.register )
 router.post ( '/login', userController.login )
 router.get ( '/news', newsController.read )
 router.get ( '/news/:id', newsController.findOne )
@@ -21,8 +19,6 @@ router.post ( '/suggest', suggestController.create )
 
 router.use ( authentication )
 router.post ( '/news', upload.single('galeri'), toImageKit, newsController.create )
-// router.put ( '/news/:id', upload.single('galeri'), toImageKit, newsController.update )
-// router.put ( '/events/:id', upload.single('galeri'), toImageKit, newsController.update )
 router.patch ( '/news/:id/editTitle', newsController.modifyTitle )
 router.patch ( '/news/:id/editImage', upload.single('galeri'), toImageKit, newsController.modifyImage )
 router.patch ( '/news/:id/editDescription', newsController.modifyDescription )
