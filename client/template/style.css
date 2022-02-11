@@ -1,0 +1,26 @@
+.bg-custom {
+	background-color: #1a2c43f8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+.box-simple {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 0px;
+  padding: 5%;
+}
+
+.txtDiv {
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  background: #1a2c43f8;
+  color: #fff;
+}
+
+.stretched-link {
+  text-decoration: none;
+  color:black
+}
